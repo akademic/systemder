@@ -1,0 +1,5 @@
+- [x] render service and timer units from templates
+- [] generate service unit from current running service name and working directory
+- [] generate oneshot and timer units from current working directory
+- [] write unit files to /etc/systemd/system
+- [] enable service and timer units
