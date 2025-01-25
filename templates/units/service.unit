@@ -1,0 +1,13 @@
+[Unit]
+Description={{.Description}}
+Requires=network-online.target
+After=network-online.target
+
+[Service]
+Restart={{.Restart}}
+RestartSec={{.RestartSec}}
+ExecStart={{.ExecStart}}
+WorkingDirectory={{.WorkingDirectory}}
+
+[Install]
+WantedBy=multi-user.target

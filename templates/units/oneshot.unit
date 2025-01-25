@@ -1,0 +1,11 @@
+[Unit]
+Description={{.Description}}
+Wants={{.Wants}}
+
+[Service]
+Type=oneshot
+ExecStart={{.ExecStart}}
+WorkingDirectory={{.WorkingDirectory}}
+
+[Install]
+WantedBy=multi-user.target
