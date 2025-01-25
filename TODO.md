@@ -3,3 +3,7 @@
 - [] generate oneshot and timer units from current working directory
 - [] write unit files to /etc/systemd/system
 - [] enable service and timer units
+
+## Lategame
+
+- [] add validation for OnCalendar format
