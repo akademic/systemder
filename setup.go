@@ -35,8 +35,8 @@ func (s *Systemder) SetupService(desc, name string) error {
 	return nil
 }
 
-func (s *Systemder) SetupTimer(desc, onCalendar, name string) error {
-	err := s.GenerateAndWriteTimer(desc, onCalendar, name)
+func (s *Systemder) SetupTimer(desc, onCalendar, name string, args []string) error {
+	err := s.GenerateAndWriteTimer(desc, onCalendar, name, args)
 	if err != nil {
 		return err
 	}

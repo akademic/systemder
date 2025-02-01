@@ -19,8 +19,8 @@ func (s *Systemder) GenerateAndWriteService(desc, name string) error {
 }
 
 // GenerateAndWriteOneshot generates a oneshot unit file and writes it to the default directory.
-func (s *Systemder) GenerateAndWriteTimer(desc, onCalendar, name string) error {
-	oneshot, err := s.GenerateOneshot(desc, name)
+func (s *Systemder) GenerateAndWriteTimer(desc, onCalendar, name string, args []string) error {
+	oneshot, err := s.GenerateOneshot(desc, name, args)
 	if err != nil {
 		return err
 	}

@@ -83,7 +83,8 @@ func TestGenerateAndWriteTimer(t *testing.T) {
 	desc := "Test timer"
 	onCalendar := "* * * * *"
 	name := "testtimer"
-	err := s.GenerateAndWriteTimer(desc, onCalendar, name)
+	args := []string{"arg1", "arg2"}
+	err := s.GenerateAndWriteTimer(desc, onCalendar, name, args)
 	if err != nil {
 		t.Errorf("unexpected error: %v", err)
 	}
@@ -101,7 +102,7 @@ func TestGenerateAndWriteTimer(t *testing.T) {
 		t.Fatalf("unexpected written data: %s", write.calls[0].writtenData)
 	}
 
-	binaryName := "systemder.test" // go test makes a binary with this name
+	binaryName := "systemder.test arg1 arg2" // go test makes a binary with this name
 	if !strings.Contains(string(write.calls[0].writtenData), binaryName) {
 		t.Fatalf("unexpected written data: %s", write.calls[0].writtenData)
 	}
