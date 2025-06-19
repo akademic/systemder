@@ -22,7 +22,7 @@ func (s *Systemder) SetupService(desc, name string) error {
 		if err != nil {
 			dErr := systemctl.DisableService(unitName)
 			if dErr != nil {
-				s.log.Error("failed to disable service: %v", err)
+				s.log.Error("failed to disable service: %v", dErr)
 			}
 		}
 	}()
